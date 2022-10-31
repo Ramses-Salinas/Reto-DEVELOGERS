@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="subject_action" model="ir.actions.act_window">
+        <field name="name">Subject action</field>
+        <field name="res_model">subject</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <record id="student_action" model="ir.actions.act_window">
+        <field name="name">Student action</field>
+        <field name="res_model">student</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <record id="teacher_action" model="ir.actions.act_window">
+        <field name="name">Teacher action</field>
+        <field name="res_model">teacher</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem id="school_menu_root" name="Test">
+        <menuitem id="subject_first_level_menu" name="First Level">
+            <menuitem id="subject_model_menu_action" action="subject_action"/>
+        </menuitem>
+        <menuitem id="student_first_level_menu" name="First Level">
+            <menuitem id="student_model_menu_action" action="student_action"/>
+        </menuitem>
+        <menuitem id="teacher_first_level_menu" name="First Level">
+            <menuitem id="teacher_model_menu_action" action="teacher_action"/>
+        </menuitem>
+    </menuitem>
+</odoo>
